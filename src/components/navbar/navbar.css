@@ -1,0 +1,58 @@
+.app__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app__navbar h1 {
+    color: var(--color-30);
+}
+
+.app__navbar-links {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+}
+
+.app__navbar-links-a {
+    color: var(--color-30);
+    padding: 0 0 0 2rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+.app__navbar-links button {
+    margin: 0 0 0 2rem;
+    letter-spacing: 0.05em;
+    background: var(--color-10);
+    color: #fff;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+.app__navbar-links button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.app__navbar-links-a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.app__navbar-links button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+}
+
+.app__navbar-links-a:active,
+.app__navbar-links button:active {
+    opacity: 0.35;
+}

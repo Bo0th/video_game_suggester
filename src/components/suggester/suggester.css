@@ -1,0 +1,121 @@
+.app__suggester {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.app__suggester-returnToSearch {
+    width: 600px;
+    margin: 0 3rem;
+    letter-spacing: 0.05em;
+    background: var(--color-10);
+    color: #fff;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+}
+
+.app__suggester-returnToSearch:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+}
+
+.app__suggester-returnToSearch:active {
+    opacity: 0.35;
+}
+
+.app__suggester-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.app__suggester-info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    height: 500px;
+    width: 60%;
+    
+}
+
+.app__suggester-info-content h3 {
+    color: var(--color-30);
+    margin-bottom: 2rem ;
+}
+
+.app__suggester-info-content-description {
+    color: var(--color-30Text);
+    overflow-y: scroll;
+    height: 50%;
+    width: 90%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-30) #00000000;
+    padding-right: 5px ;
+}
+
+.app__suggester-info-content-description::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+.app__suggester-info-content-description::-webkit-scrollbar-thumb {
+    background-color: var(--color-30);
+}
+
+.app__suggester-info-content-description::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.app__suggester-info-content-addedInfo {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+
+}
+
+.app__suggester-info-content-addedInfo h4 {
+    margin-right: 1rem;
+    color: var(--color-30);
+}
+
+.app__suggester-info-content-addedInfo p {
+    padding: 0 0.5rem;
+    color: var(--color-30Text);
+}
+
+.app__suggester-info-content-addedInfo-genres,
+.app__suggester-info-content-addedInfo-platforms {
+    display: flex;
+    padding: 0.4rem 0;
+
+}
+
+.app__suggester-info-content-addedInfo-genres h4,
+.app__suggester-info-content-addedInfo-platforms h4 {
+    width: 160px;
+
+
+}
+
+
+.app__suggester-info-store {
+    color: var(--color-30);
+}
+
+.app__suggester-info-store a {
+    color: #fff;
+}
+
+.app__suggester-info-store a:hover {
+    color: #000;
+}
+
+.app__suggester-info-store a:active {
+    opacity: 0.35;
+}

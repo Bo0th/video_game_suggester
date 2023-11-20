@@ -1,0 +1,19 @@
+.app__platformSelecter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.app__platformSelecter h1 {
+    color: var(--color-30);
+    margin-bottom: 2rem;
+}
+
+.app__platformSelecter-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

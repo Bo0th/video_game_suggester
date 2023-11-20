@@ -1,0 +1,49 @@
+.app__home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 70.4px);
+    width: 100%;
+}
+
+.app__home h1 {
+    color: var(--color-30);
+    margin: 2rem;
+}
+
+.app__home h2 {
+    color: var(--color-30Text);
+    margin: 2rem;
+}
+
+.app__home h3 {
+    color: var(--color-30Text);
+    margin: 2rem;
+}
+
+.app__home-buttons button {
+    margin: 2rem 3rem;
+    width: 400px;
+    height: 80px;
+    letter-spacing: 0.05em;
+    background: var(--color-10);
+    color: #fff;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+    font-size: 15px;
+
+}
+
+.app__home-buttons button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+}
+
+.app__home-buttons button:active {
+    opacity: 0.35;
+}

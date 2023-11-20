@@ -1,0 +1,27 @@
+.app__aboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.app__aboutUs h1 {
+    color: var(--color-30);
+    margin: 5rem 0;
+}
+
+.app__aboutUs p {
+    color: var(--color-30Text);
+    margin: 1.3rem 0;
+    width: 80%;
+}
+
+#app__aboutUs-happy  {
+    color: var(--color-30);
+}
+
+.app__aboutUs-rawg {
+    position: absolute;
+    bottom: 0;
+}

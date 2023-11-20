@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+* {
+    font-family: 'Press Start 2P';
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --color-10: #788374;
+    --color-30: #f5e9bf;
+    --color-60: linear-gradient(111deg, rgba(55,42,57,1) 0%, #aa644d 99%); 
+    --color-30Text: #f5e9bf80;
+/* 
+    --color-10: #aa644d;
+    --color-30: #f5e9bf;
+    --color-60: linear-gradient(111deg, rgba(55,42,57,1) 0%, rgba(120,131,116,1) 99%);  */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg__red-gradient {
+    background: linear-gradient(176deg, rgba(0,0,0,1) 0%, rgba(5,0,0,1) 6%, rgba(42,1,1,1) 47%, rgba(71,1,1,1) 75%, rgba(74,4,4,1) 180%);;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg__color {
+    background: var(--color-60);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+    min-height: 100vh;
+    background: var(--color-60);
 }
