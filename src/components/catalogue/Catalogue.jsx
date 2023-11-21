@@ -3,7 +3,7 @@ import Card from '../card/Card'
 import './catalogue.css'
 import Suggester from '../suggester/Suggester'
 
-const Catalogue = ({clientId, catalogueToStart, reRun2}) => {
+const Catalogue = ({clientId, catalogueToStart, reRun}) => {
   const [allGamesNext, setAllGamesNext] = useState('')
   const [allGamesResults, setAllGamesResults] = useState([])
   const [allPlatforms, setAllPlatforms] = useState([])
@@ -147,7 +147,7 @@ const Catalogue = ({clientId, catalogueToStart, reRun2}) => {
 
   useEffect(() => {
     setShowCatalogue(true)
-  },[reRun2])
+  },[reRun])
 
   const ratingsArray = [
     {text:'1', number: 1},
