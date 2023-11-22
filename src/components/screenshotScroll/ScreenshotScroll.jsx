@@ -30,6 +30,8 @@ const ScreenshotScroll = ({game, clientId}) => {
       }  
     }
 
+    console.log(screenshotArray)
+
   return (
     <div className='app__screenshotScroll'>
       <h1>Screenshots </h1>
@@ -42,7 +44,9 @@ const ScreenshotScroll = ({game, clientId}) => {
           
           {screenshotArray.map((screenshot) => {
           return (
-              <img src={screenshot.image} alt="screenshot" />
+              <a href={screenshot.image} target='blank'>
+                <img src={screenshot.image} alt="screenshot"  />
+              </a>
           )
           })}
           

@@ -45,6 +45,19 @@
     display: flex;
     scrollbar-width: none;
     align-items: center;
+
+}
+
+.app__screenshotScroll-content-gallery a:hover {
+    transition: 0.2s ease;
+}
+
+.app__screenshotScroll-content-gallery a:hover {
+    padding-bottom: 2rem;
+}
+
+.app__screenshotScroll-content-gallery a:active {
+    opacity: 0.35;
 }
 
 .app__screenshotScroll-content-gallery::-webkit-scrollbar {
