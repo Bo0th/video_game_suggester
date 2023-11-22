@@ -36,26 +36,29 @@ const ScreenshotScroll = ({game, clientId}) => {
     <div className='app__screenshotScroll'>
       <h1>Screenshots </h1>
 
-      <div className='app__screenshotScroll-content'>
-        <div className='app__screenshotScroll-content-arrow_container' onClick={() => scroll('left')}>
-          <h1>&lt;</h1>
+      {screenshotArray.length === 0 ?
+        <p>Sorry no screenshots were found for this game</p>
+        : 
+        <div className='app__screenshotScroll-content'>
+          <div className='app__screenshotScroll-content-arrow_container' onClick={() => scroll('left')}>
+            <h1>&lt;</h1>
+          </div>
+          <div className='app__screenshotScroll-content-gallery' ref={scrollRef}>
+                      
+              {screenshotArray.map((screenshot) => {
+                return (
+                  <a href={screenshot.image} target='blank'>
+                    <img src={screenshot.image} alt="screenshot"  />
+                  </a>
+                )
+              })
+            }             
+          </div>
+          <div className='app__screenshotScroll-content-arrow_container' onClick={() => scroll('right')}>
+            <h1>&gt;</h1>
+          </div>
         </div>
-        <div className='app__screenshotScroll-content-gallery' ref={scrollRef}>
-          
-          {screenshotArray.map((screenshot) => {
-          return (
-              <a href={screenshot.image} target='blank'>
-                <img src={screenshot.image} alt="screenshot"  />
-              </a>
-          )
-          })}
-          
-        </div>
-
-        <div className='app__screenshotScroll-content-arrow_container' onClick={() => scroll('right')}>
-          <h1>&gt;</h1>
-        </div>
-      </div>
+      }   
       
     </div>
   )

@@ -12,9 +12,6 @@ const Navbar = ({onCatalogueClick}) => {
         setDisplayMenu(false)
     }
 
-    
-    console.log(displayMenu)
-
     return (
         <div className='app__navbar'>
             <h1>Video Game Suggester</h1>

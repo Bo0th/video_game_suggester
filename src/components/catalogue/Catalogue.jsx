@@ -177,7 +177,7 @@ const Catalogue = ({clientId, catalogueToStart, reRun}) => {
       setGenre('')
     }
 
-    if(document.getElementById('genres').value !== NaN){
+    if(document.getElementById('rating').value !== NaN){
       setRating(document.getElementById('rating').value * 10)
     }
     else {
@@ -344,7 +344,7 @@ const Catalogue = ({clientId, catalogueToStart, reRun}) => {
       <div className='app__catalogue-content'>
         {allGamesResults.map((game) => {
           return(
-            <Card parent='catalogue' passSelectedGame={passSelectedGame} image={game.background_image} name={game.name} id={game.id} released={game.released} rating={game.rating}/>
+            <Card parent='catalogue' passSelectedGame={passSelectedGame} image={game.background_image} name={game.name} id={game.id} released={game.released} rating={game.metacritic}/>
             )
         })}
       </div>

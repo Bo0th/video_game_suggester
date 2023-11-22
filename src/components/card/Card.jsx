@@ -22,11 +22,17 @@ const Card = ({image, name, released, rating, id, parent, platformSelecter, pare
     passSelectedGame(selectedGame)
   }
 
+  // console.log({image})
+
   if(parent === 'suggester'){
     return (
       <div className='app__card-suggester'>
         <div className='app__card-suggester-image'>
-          <img src={image} alt="game image" />
+          {image === null ? 
+            <p>Sorry no image found for this game</p>
+            :
+            <img src={image} alt="game image" />
+          }
         </div>
 
         <div className='app__card-suggester-content'>
@@ -40,32 +46,32 @@ const Card = ({image, name, released, rating, id, parent, platformSelecter, pare
                 <p>{rating/10} out of 10</p>
                 </div>
               }
-
         </div>
-
       </div>
   )}
   else if (parent === 'parentPlatformSelecter') {
     return (
       <div className='app__card-parentPlatformSelecter' onClick={cardParentPlatformSelecter}>
         <div className='app__card-parentPlatformSelecter-image'>
-          <img src={image} alt="game image" />
+          {image === null ? 
+            <p>Sorry no image found for this game</p>
+            :
+            <img src={image} alt="game image" />
+          }
         </div>
 
         <div className='app__card-parentPlatformSelecter-content'>
-              <div className='app__card-parentPlatformSelecter-content-left'>
-                  <h4>{name}</h4>
-                  <p>{released}</p>
-              </div>
+          <div className='app__card-parentPlatformSelecter-content-left'>
+              <h4>{name}</h4>
+              <p>{released}</p>
+          </div>
 
-              {rating && 
-                <div className='app__card-parentPlatformSelecter-content-right'>
-                <p>{rating*2} out of 10</p>
-                </div>
-              }
-
+          {rating && 
+            <div className='app__card-parentPlatformSelecter-content-right'>
+            <p>{rating/10} out of 10</p>
+            </div>
+          }
         </div>
-
       </div>
     )
   } 
@@ -73,24 +79,26 @@ const Card = ({image, name, released, rating, id, parent, platformSelecter, pare
     return (
       <div className='app__card-catalogue' onClick={cardPassSelectedGame}>
         <div className='app__card-catalogue-image'>
-          <img src={image} alt="game image" />
+          {image === null ? 
+            <p>Sorry no image found for this game</p>
+            :
+            <img src={image} alt="game image" />
+          }
         </div>
 
         <div className='app__card-catalogue-content'>
-              <div className='app__card-catalogue-content-left'>
-                  <h4>{name}</h4>
-                  
-              </div>
+          <div className='app__card-catalogue-content-left'>
+              <h4>{name}</h4>
+              
+          </div>
 
-              {rating && 
-                <div className='app__card-catalogue-content-right'>
-                <p>{released}</p>
-                <p>{rating*2} out of 10</p>
-                </div>
-              }
-
+          {rating && 
+            <div className='app__card-catalogue-content-right'>
+            <p>{released}</p>
+            <p>{rating/10} out of 10</p>
+            </div>
+          }
         </div>
-
       </div>
     )
   }
@@ -98,23 +106,25 @@ const Card = ({image, name, released, rating, id, parent, platformSelecter, pare
     return (
       <div className='app__card-platformSelecter' onClick={cardPlatformSelecter}>
         <div className='app__card-platformSelecter-image'>
-          <img src={image} alt="game image" />
+          {image === null ? 
+            <p>Sorry no image found for this game</p>
+            :
+            <img src={image} alt="game image" />
+          }
         </div>
 
         <div className='app__card-platformSelecter-content'>
-              <div className='app__card-platformSelecter-content-left'>
-                  <h4>{name}</h4>
-                  <p>{released}</p>
-              </div>
+          <div className='app__card-platformSelecter-content-left'>
+              <h4>{name}</h4>
+              <p>{released}</p>
+          </div>
 
-              {rating && 
-                <div className='app__card-platformSelecter-content-right'>
-                <p>{rating*2} out of 10</p>
-                </div>
-              }
-
+          {rating && 
+            <div className='app__card-platformSelecter-content-right'>
+            <p>{rating/10} out of 10</p>
+            </div>
+          }
         </div>
-
       </div>
     )
   }

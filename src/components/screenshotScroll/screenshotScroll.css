@@ -12,6 +12,10 @@
     padding: 3rem 0 2rem 0;
 }
 
+.app__screenshotScroll p {
+    padding: 0 0 3rem 0;
+}
+
 .app__screenshotScroll-content {
     display: flex;
     justify-content: space-between;
@@ -45,7 +49,6 @@
     display: flex;
     scrollbar-width: none;
     align-items: center;
-
 }
 
 .app__screenshotScroll-content-gallery a:hover {
