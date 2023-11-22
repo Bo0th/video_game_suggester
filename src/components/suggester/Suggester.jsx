@@ -4,7 +4,7 @@ import ScreenshotScroll from '../screenshotScroll/ScreenshotScroll'
 import './suggester.css'
 
 const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
-    const [reRunIncrement, setReRunIncrement] = useState(reRun)  
+    const [refresh, setRefresh] = useState(false)  
     const [arraySize, setArraySize] = useState(0) 
     const [suggestedGame, setSuggestedGame] = useState('No game found')
     const [gameDescription, setGameDescription] = useState('No description found')
@@ -21,7 +21,7 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
     const [catalogueGameDataReleased, setCatalogueGameDataReleased] = useState('')
 
     useEffect(() => {
-
+      setRefresh(false)
 
       if (gameId) {
         const fetchCatalogueGameData = async () => {
@@ -226,10 +226,14 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
         fetchAll()
       }
       
-    }, [reRun])
+    }, [reRun, refresh])
 
     const handleClickCatalogueToTrue = () => {
       catalogueToTrue(true)
+    }
+
+    const refreshDom = () => {
+      setRefresh(true)
     }
 
     // console.log(`gameData is`, catalogueGameData)
@@ -299,7 +303,7 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
       return (
         <div className='app__suggester'>
           <div className='app__suggester-info'>
-            
+            <button className='app__suggester-newSuggestion' type='button' onClick={refreshDom}>New Suggestion</button>
             <Card parent='suggester' image={suggestedGame.background_image} name={suggestedGame.name} released={suggestedGame.released} rating={suggestedGame.metacritic} />
             
             <div className='app__suggester-info-content'>

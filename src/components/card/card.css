@@ -44,6 +44,56 @@
     width: 180px;
 }
 
+@media screen and (max-width:1000px) {
+    .app__card-suggester {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__card-suggester {
+        width: 100%;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .app__card-suggester-image img {
+        height: auto;
+    }
+
+    .app__card-suggester-content {
+        margin-top: 2rem;
+    }
+
+    .app__card-suggester-content-right {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__card-suggester {
+        margin-top: 0;
+    }
+
+    .app__card-suggester-content {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .app__card-suggester-content-right {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        margin-top: 1rem;
+    }
+
+}
+
 
 /**Used with the parentPlatformSelecter prop**/
 .app__card-parentPlatformSelecter {
@@ -110,6 +160,28 @@
     display: none;
 }
 
+@media screen and (max-width:500px) {
+    .app__card-parentPlatformSelecter {
+        width: 40%;
+        height: 80px;
+        margin:2%
+    }
+
+    .app__card-parentPlatformSelecter-content-left h4 {
+        font-size: 10px;
+        text-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .app__card-parentPlatformSelecter {
+        width: 80%;
+    }
+}
+
+
+
+
 /**Used with the platformSelecter prop**/
 .app__card-platformSelecter {
     display: flex;
@@ -167,6 +239,23 @@
 
 .app__card-platformSelecter-content-right p {
     width: 180px;
+}
+
+@media screen and (max-width:400px) {
+    .app__card-platformSelecter{
+        width: 90%;
+        height: auto;
+    }
+
+    .app__card-platformSelecter-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        width: 90%;
+        height: auto;
+    }
+    
 }
 
 /**Used with the catalogue prop**/
@@ -256,5 +345,27 @@
 .app__card-catalogue:hover .app__card-catalogue-content-right p {
     color: black;
     font-size: 14px;
+}
+
+@media screen and (max-width:400px) {
+    .app__card-catalogue{
+        width: 90%;
+        height: auto;
+    }
+
+    .app__card-catalogue:hover {
+        width: 100%;
+    }
+
+    .app__card-catalogue-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        width: 90%;
+        height: auto;
+    
+    }
+
 }
 

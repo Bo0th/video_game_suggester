@@ -8,12 +8,14 @@
 
 .app__aboutUs h1 {
     color: var(--color-30);
-    margin: 5rem 0;
+    margin: 6rem 1rem;
+    text-align: center;
+
 }
 
 .app__aboutUs p {
     color: var(--color-30Text);
-    margin: 1.3rem 0;
+    margin: 1.3rem 1rem;
     width: 80%;
 }
 
@@ -22,6 +24,17 @@
 }
 
 .app__aboutUs-rawg {
-    position: absolute;
-    bottom: 0;
+    justify-self: end;
+}
+
+@media screen and (max-width: 550px) {
+    .app__aboutUs h1 {
+        font-size: 24px;
+        margin: 5rem 1rem 1rem 1rem;
+    
+    }
+    
+    .app__aboutUs p {
+        font-size: 13px;
+    }
 }

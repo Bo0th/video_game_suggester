@@ -3,12 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 .app__platformSelecter h1 {
     color: var(--color-30);
     margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
 }
 
 .app__platformSelecter-platforms {
@@ -16,4 +18,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 350px) {
+    .app__platformSelecter h1 {
+        font-size: 28px;
+    }
 }

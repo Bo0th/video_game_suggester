@@ -1,15 +1,14 @@
 .app__catalogue {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 4rem;
     justify-content: space-around;
 }
 
 .app__catalogue h2 {
     color: var(--color-30);
-    padding-left: 3rem;
+    padding: 2rem 3rem;
     font-size: 26px;
-    padding-bottom: 2rem;
 }
 
 .app__catalogue-filters {
@@ -114,3 +113,95 @@
     box-shadow: 2px 2px;
     margin: 2rem 0 3rem 0;
 }
+
+@media screen and (max-width:1650px) {
+    .app__catalogue-filters-bottom {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .app__catalogue-filters-top {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .app__catalogue-filters-top {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    .app__catalogue-filters-bottom {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .app__catalogue-filters form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .app__catalogue-filters-top {
+        flex-direction: column;
+        align-items: start;
+        width: auto;
+    }
+
+    .app__catalogue-filters-top-platforms,
+    .app__catalogue-filters-top-genres,
+    .app__catalogue-filters-top-rating,
+    .app__catalogue-filters-top-stores {
+        margin-bottom: 1rem;
+        align-items: start;
+    }
+
+    .app__catalogue-filters-bottom {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .app__catalogue-filters-bottom input,
+    .app__catalogue-filters-bottom button {
+        margin: 1rem 0;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .app__catalogue-filters form {
+        flex-direction: column;
+    }
+    .app__catalogue-filters-top {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .app__catalogue h2 {
+        padding: 2rem 10px;
+        text-align: center;
+    }
+
+    .app__catalogue-filters-top {
+        padding: 0 10px;
+    }
+    
+    .app__catalogue-filters-top-platforms select,
+    .app__catalogue-filters-top-stores select,
+    .app__catalogue-filters-top-genres select,
+    .app__catalogue-filters-top-rating select {
+        font-size: 12px;
+        width: 95% ;
+        overflow-x: scroll;
+
+    }
+}
+
+

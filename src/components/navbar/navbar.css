@@ -56,3 +56,133 @@
 .app__navbar-links button:active {
     opacity: 0.35;
 }
+
+.app__navbar-links-smallscreen {
+    display: none;
+}
+
+#app__navbar-smallscreenMenuIcon {
+    color: var(--color-30);
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#app__navbar-smallscreenMenuIcon button {
+    height: 28px;
+}
+
+.menuIcon {
+    height: 28px;
+    width: 28px;
+    margin-left: 1rem;
+}
+
+.menuIcon:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.menuIcon:active {
+    opacity: 0.35;
+}
+
+@media screen and (max-width:1420px) {
+    .app__navbar h1 {
+        font-size: 24px;
+    }
+
+    .app__navbar-links-a {
+        font-size: 14px;
+    }
+    
+    .app__navbar-links button {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    #app__navbar-smallscreenMenuIcon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .app__navbar-links-smallscreen {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .app__navbar-links-smallscreen a {
+        padding: 0;
+    }
+
+    .app__navbar-links-smallscreen p {
+        padding-bottom: 1rem;
+    }
+
+    .app__navbar-links-smallscreen button {
+        width: 100%;
+        height: 28px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .app__navbar h1 {
+        font-size: 18px;
+    }
+    
+    #app__navbar-smallscreenMenuIcon button {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .app__navbar h1 {
+        text-wrap: wrap;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #app__navbar-smallscreenMenuIcon {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: end;
+    }
+
+    #app__navbar-smallscreenMenuIcon button {
+        display: none;
+    }
+
+    .app__navbar-links-smallscreen {
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-60);
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .app__navbar-links-smallscreen p {
+        padding-bottom: 3rem;
+    }
+
+    .app__navbar-links-smallscreen button {
+        width: 200px;
+    }
+}

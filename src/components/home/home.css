@@ -5,6 +5,8 @@
     flex-direction: column;
     height: calc(100vh - 70.4px);
     width: 100%;
+    text-wrap: wrap;
+    text-align: center;
 }
 
 .app__home h1 {
@@ -46,4 +48,31 @@
 
 .app__home-buttons button:active {
     opacity: 0.35;
+}
+
+@media screen and (max-width:700px) {
+    .app__home h1 {
+        font-size: 28px;
+    }
+    
+    .app__home h2 {
+        font-size: 22px;
+    }
+    
+    .app__home h3 {
+        font-size: 16px;
+    }
+    
+    .app__home-buttons button {
+        font-size: 15px;
+        width: 400px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .app__home-buttons button {
+        margin: 2rem 0;
+        width: 90%;
+    }
 }
