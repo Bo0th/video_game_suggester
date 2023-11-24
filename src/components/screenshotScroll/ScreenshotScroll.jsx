@@ -47,7 +47,7 @@ const ScreenshotScroll = ({game, clientId}) => {
                       
               {screenshotArray.map((screenshot) => {
                 return (
-                  <a href={screenshot.image} target='blank'>
+                  <a href={screenshot.image} target='_blank'>
                     <img src={screenshot.image} alt="screenshot"  />
                   </a>
                 )

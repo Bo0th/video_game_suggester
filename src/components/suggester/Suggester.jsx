@@ -4,6 +4,7 @@ import ScreenshotScroll from '../screenshotScroll/ScreenshotScroll'
 import './suggester.css'
 
 const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
+    const [loading, setLoading] = useState(false)
     const [refresh, setRefresh] = useState(false)  
     const [arraySize, setArraySize] = useState(0) 
     const [suggestedGame, setSuggestedGame] = useState('No game found')
@@ -56,6 +57,7 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
 
         
         const fetchAll = async () => {
+          setLoading(true)
           const tempCatalogueGameData = await fetchCatalogueGameData()
           const tempCatalogueGameStores = await fetchCatalogueStoreURL()
           // console.log(`temp is`, tempCatalogueGameStores)
@@ -82,6 +84,7 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
           if(tempCatalogueGameStores.results[0]){
             setCatalogueGameDataStore(tempCatalogueGameStores.results[0])}
             
+          setLoading(false)
         }
         
 
@@ -174,6 +177,7 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
         }
 
         const fetchAll = async () => {
+          setLoading(true)
           const tempArraySize = await fetchArraySize()
           // console.log('fetch array size worked')
           const tempSuggestedGame = await fetchSuggestedGame(tempArraySize.count)
@@ -218,6 +222,8 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
           } 
           else {setGameDescription('Something went wrong, no game found. Please try again.')
           }
+
+          setLoading(false)
         }
 
         // console.log(suggestedGame)
@@ -225,6 +231,8 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
         resetStates()
         fetchAll()
       }
+
+     
       
     }, [reRun, refresh])
 
@@ -244,7 +252,14 @@ const Suggester = ({reRun, clientId, platformId, gameId, catalogueToTrue}) => {
     // console.log(`gameStore is`, catalogueGameDataStore)
     // console.log(`gameRating is`, catalogueGameDataRating)
 
-    if(gameId){ 
+
+    if(loading == true) {
+      return (
+        <div className='app__suggester-loading'>
+          <h1>Loading...</h1>
+        </div>
+      )
+    } else if(gameId){ 
       return (
         <div className='app__suggester'>
           <div className='app__suggester-info'>
