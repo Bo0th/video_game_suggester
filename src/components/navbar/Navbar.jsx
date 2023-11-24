@@ -14,7 +14,7 @@ const Navbar = ({onCatalogueClick}) => {
 
     return (
         <div className='app__navbar'>
-            <h1>Video Game Suggester</h1>
+           <h1><Link to="/">Video Game Suggester</Link></h1>
 
             <div className='app__navbar-links'>
                 <p><Link to="/" className='app__navbar-links-a'>Home</Link></p>
